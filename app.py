@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-TOKEN = os.getenv("7807391415:AAFfRcTM_Cp8_o_RYwOPsS4rNSYIdXb190k")
+TOKEN = "7807391415:AAFfRcTM_Cp8_o_RYwOPsS4rNSYIdXb190k"
 
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
