@@ -6,7 +6,11 @@ from aiogram.types import Message, FSInputFile, URLInputFile, BufferedInputFile
 from aiogram import F  # новый импорт!
 from aiogram.utils.keyboard import ReplyKeyboardBuilder  # новый импорт!
 from variables import *
-TOKEN = '7807391415:AAF-UmkD5xZI3T75eFxNQYXMkZiN5ZcYzmU'
+
+import os
+from aiohttp import web
+
+os.getenv('BOT_TOKEN')
 
 # Включаем логирование, чтобы не пропустить важные сообщения
 logging.basicConfig(level=logging.INFO)
@@ -14,7 +18,22 @@ logging.basicConfig(level=logging.INFO)
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 
+# ---------------
 
+async def handle(request):
+    return web.Response(text="Bot is running!")
+
+async def start_server():
+    app = web.Application()
+    app.router.add_get("/", handle)
+    runner = web.AppRunner(app)
+    await runner.setup()
+    # Render сам подставит порт в переменную среды PORT
+    port = int(os.environ.get("PORT", 8080))
+    site = web.TCPSite(runner, "0.0.0.0", port)
+    await site.start()
+
+# --------------
 
 @dp.message(Command('start'))
 async def cmd_start(message: Message):
@@ -97,3 +116,4 @@ async def main():
 
 
 asyncio.run(main())
+
