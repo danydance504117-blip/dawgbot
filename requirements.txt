@@ -1,5 +1,5 @@
 Flask
 requests
-gunicom
+gunicorn
 aiogram
 aiohttp
