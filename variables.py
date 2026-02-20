@@ -194,7 +194,7 @@ text_song_BIPOLARKA = """мне на тебя * новая в субботу
 """
 
 
-img_BIPOLARKA = os.path.join(BASE_DIR, 'files', 'img' , 'БИПОЛЯРКА.jpg')
+img_BIPOLARKA = os.path.join(BASE_DIR, 'files', 'img' , 'bipolarka.jpg')
 
 text_song_BREZLIVOST = """я брезгливый человек и мне от вас мерзко у******
 в центре города не здороваюсь больше за руку
@@ -246,6 +246,7 @@ text_list_demo = ''
 for song in demo_list:
     text_list_demo = text_list_demo + f'{count}) {name} - {song}\n'
     count += 1
+
 
 
 
