@@ -1,4 +1,7 @@
-TOKEN = '7807391415:AAFfRcTM_Cp8_o_RYwOPsS4rNSYIdXb190k'
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 text_help = '''Доступные команды:
 /start
@@ -9,7 +12,7 @@ text_help = '''Доступные команды:
 /song
 '''
 
-img_author = r'C:\Users\Admin\Desktop\photo_2025-11-28_15-36-42.jpg'
+
 text_author = 'HOODRICHSWOPER - RED FLAG\n <tg-spoiler>на всех площадках</tg-spoiler>'
 
 
@@ -43,7 +46,7 @@ text_song_INDUSTRIA = """ИНДУСТРИЯ
 видно по глазам homeless
 хоть не бываю я один
 """
-img_INDUSTRIA = r'C:\Users\Admin\Desktop\инф\code\12. aiogram\files\img\dexter.jpg'
+img_INDUSTRIA = os.path.join(BASE_DIR, 'files', 'img' , 'dexter.jpg')
 
 
 text_song_RED_FLAG = """"зачем ты плачешь зай лучше б думала тогда
@@ -101,7 +104,7 @@ text_song_RED_FLAG2 = """"зачем ты плачешь зай лучше б д
 https://band.link/GLILH 
 """
 
-img_RED_FLAG = r'C:\Users\Admin\Desktop\инф\code\12. aiogram\files\img\red.jpg'
+img_RED_FLAG = os.path.join(BASE_DIR, 'files', 'img' , 'red.jpg')
 
 text_song_ARMANI = '''я не плачу за эту суку потому что я **лан и я знаю она dumb и я знаю она в хлам
 она лишь моя запаска пусть башляет ее пахан 
@@ -170,8 +173,7 @@ text_song_ARMANI2 = '''
 
 '''
 
-img_ARMANI = r'C:\Users\Admin\Desktop\инф\code\12. aiogram\files\img\ARMANI.jpg'
-
+img_ARMANI = os.path.join(BASE_DIR, 'files', 'img' , 'ARMANI.jpg')
 
 
 text_song_BIPOLARKA = """мне на тебя * новая в субботу
@@ -191,7 +193,8 @@ text_song_BIPOLARKA = """мне на тебя * новая в субботу
 я разбитый однолюб одна лишь в моих снах 
 """
 
-img_BIPOLARKA = r'C:\Users\Admin\Desktop\инф\code\12. aiogram\files\img\БИПОЛЯРКА.jpg'
+
+img_BIPOLARKA = os.path.join(BASE_DIR, 'files', 'img' , 'БИПОЛЯРКА.jpg')
 
 text_song_BREZLIVOST = """я брезгливый человек и мне от вас мерзко у******
 в центре города не здороваюсь больше за руку
@@ -230,7 +233,7 @@ text_song_BREZLIVOST = """я брезгливый человек и мне от 
 https_release = """ https://band.link/GLILH """
 
 
-img_BREZGLIVOST = r'C:\Users\Admin\Desktop\инф\code\12. aiogram\files\img\БРЕЗГЛИВОСТЬ.jpg'
+img_BREZGLIVOST = os.path.join(BASE_DIR, 'files', 'img' , 'БРЕЗГЛИВОСТЬ.jpg')
 
 
 
@@ -244,4 +247,5 @@ text_list_demo = ''
 for song in demo_list:
     text_list_demo = text_list_demo + f'{count}) {name} - {song}\n'
     count += 1
+
 
