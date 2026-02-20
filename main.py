@@ -10,7 +10,7 @@ from variables import *
 import os
 from aiohttp import web
 
-os.getenv('BOT_TOKEN')
+TOKEN = os.getenv('BOT_TOKEN')
 
 # Включаем логирование, чтобы не пропустить важные сообщения
 logging.basicConfig(level=logging.INFO)
@@ -117,5 +117,6 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
 
 
